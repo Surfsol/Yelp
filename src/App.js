@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
 import Login from './components/Login';
-// import Friends from './components/Friends';
-// import PrivateRoute from './components/PrivateRoute';
+// import Main from './components/Main';
+import Register from './components/Register';
 // import AddFriend from './components/AddFriend';
 
 function App() {
@@ -14,10 +14,10 @@ function App() {
           <li>
             <Link to="/login">Login</Link>
           </li>
-          {/* <li>
-            <Link to="">Friends List</Link>
-          </li>
           <li>
+            <Link to="/register">Sign Up</Link>
+          </li>
+          {/* <li>
             <Link to="">Add Friend</Link>
           </li> */}
         </ul>
@@ -26,6 +26,8 @@ function App() {
           {/* <PrivateRoute path="/friends" component={Friends} />
           <PrivateRoute path="" component={AddFriend} /> */}
           <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
+          {/* <Route path="/" component={Main} /> */}
          
         </Switch>
       </div>

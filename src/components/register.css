@@ -1,0 +1,37 @@
+  
+.backgroundR {
+    background-image: url("../assets/tacos.jpg");
+    background-color: #cccccc;
+    height: 800px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    display: block;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    transition: all 1000ms;
+}
+
+.backgroundR:hover{
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+}
+
+.content{
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    left:50%;
+    margin-top: 105px;
+    margin-left: -145px;
+    width: 300px;
+    height: 350px;
+    text-align: center;
+}
+
+.button{
+    background-color:transparent;
+    color: blue;
+    font-size: 1rem;
+}

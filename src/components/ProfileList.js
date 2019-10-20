@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
 import { fetchRest } from '../actions';
+import YDetail from './YDetail'
 
-import List from './List';
 
 const ProfileList = props => {
     console.log(props.fetchRest)
@@ -20,7 +20,7 @@ const ProfileList = props => {
     <div>
       {props.error && <p>{props.error}</p>}
       {props.catFacts.map(fact => (
-        <List key={fact._id} fact={fact} />
+        <YDetail key={fact._id} fact={fact} />
       ))}
     </div>
   );

@@ -22,6 +22,17 @@ export const fetchRest = () => dispatch => {
     .catch(err => dispatch({ type: FETCH_FAILURE, payload: err.response }));
 };
 
+
+export const fetchId = () => dispatch => {
+    // action objects
+    dispatch({ type: START_FETCHING });
+    // from thunk (see below) do some async action and dispatch an error or success action
+    axios.get('https://cors-anywhere.herokuapp.com/https://cat-fact.herokuapp.com/facts/movies/${id}')
+      .then(res => dispatch({ type: FETCH_SUCCESS, payload: res.data.all }))
+      // .then(res => console.log(res.data.all))
+      .catch(err => dispatch({ type: FETCH_FAILURE, payload: err.response }));
+  };
+
 //imports to NewReview.js
 export const new_review = (review) => (dispatch) => {
 	dispatch({ type: NEW_REVIEW_FETCH });

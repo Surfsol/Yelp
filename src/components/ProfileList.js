@@ -6,6 +6,7 @@ import YDetail from './YDetail'
 
 
 const ProfileList = props => {
+    
     console.log(props.fetchRest)
   useEffect(() => {
     props.fetchRest();
@@ -38,3 +39,6 @@ export default connect(
   mapStateToProps,
   { fetchRest }
 )(ProfileList);
+
+
+

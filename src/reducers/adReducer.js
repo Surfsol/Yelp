@@ -1,28 +1,27 @@
-//to consume all reducer files
-import { START_FETCHING, FETCH_SUCCESS, FETCH_FAILURE, NEW_REVIEW_FETCH, NEW_REVIEW_SUCCESS, NEW_REVIEW_FAILURE} from '../actions/index'
+import { AD_FETCH, AD_SUCCESS, AD_FAILURE} from '../actions/index'
 
 const initialState = {
-    catFacts : [],
+    ad : [],
     isFetching: false,
     error: ''
 }
 
-const RestaurantsReducer = (state = initialState, action) => {
+const AdReducer = (state = initialState, action) => {
     switch (action.type) {
-        case START_FETCHING:
+        case AD_FETCHING:
           return {
             ...state,
             isFetching: true,
             error: ''
           };
-        case FETCH_SUCCESS:
+        case AD_SUCCESS:
           return {
             ...state,
             isFetching: false,
             error: '',
             catFacts: action.payload
           };
-        case FETCH_FAILURE:
+        case AD_FAILURE:
           return {
             ...state,
             error: action.payload,
@@ -33,4 +32,4 @@ const RestaurantsReducer = (state = initialState, action) => {
       }
     };
  
-export default RestaurantsReducer;
+export default AdReducer;

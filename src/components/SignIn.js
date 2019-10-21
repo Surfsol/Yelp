@@ -93,7 +93,7 @@ const SignIn = (props) => {
 
   return (
     <>
-    <div className='backgroundR'>
+    <div className='backgroundSignin'>
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>

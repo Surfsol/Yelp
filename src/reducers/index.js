@@ -1,3 +1,12 @@
+// //to consume all reducer files
+// import RestaurantsReducer from './restaurants'
+// import {combineReducers} from 'redux'
+
+// const rootReducer = combineReducers ({
+//     restaurantsReducer: RestaurantsReducer,
+// })
+
+// export default rootReducer
 //to consume all reducer files
 import { START_FETCHING, FETCH_SUCCESS, FETCH_FAILURE, NEW_REVIEW_FETCH, NEW_REVIEW_SUCCESS, NEW_REVIEW_FAILURE} from '../actions/index'
 
@@ -7,7 +16,7 @@ const initialState = {
     error: ''
 }
 
-const reducer = (state = initialState, action) => {
+const RestaurantsReducer = (state = initialState, action) => {
     switch (action.type) {
         case START_FETCHING:
           return {
@@ -33,4 +42,4 @@ const reducer = (state = initialState, action) => {
       }
     };
  
-export default reducer
+export default RestaurantsReducer;

@@ -1,5 +1,5 @@
 import React from 'react';
-import './profilecard.css'
+import '../css/profilecard'
 
 const ProfileCard = props => {
     console.log(props)

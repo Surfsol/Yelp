@@ -6,6 +6,8 @@ import SignIn from './components/SignIn';
 // import Main from './components/Main';
 import Register from './components/Register';
 import ProfileList from './components/ProfileList';
+import Ad from './components/Ad'
+
 
 function App() {
   return (
@@ -24,6 +26,7 @@ function App() {
           <li>
             <Link to="/profileList">ProfileList</Link>
           </li>
+         
         </ul>
         {/* switch, can use without exact */}
         <Switch>
@@ -33,6 +36,11 @@ function App() {
           <Route path="/signin" component={SignIn} />
           <Route path="/register" component={Register} />
           <Route path="/profileList" component={ProfileList} />
+          <Route
+              path="/movies/:id"
+              render={props => {
+          return <Ad {...props} />;
+        }} />
          
         </Switch>
       </div>
